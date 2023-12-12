@@ -9,6 +9,7 @@ $status-colors: $online, $idle, $dnd;
 
 $username-widths: 5%, 10%, 15%;
 $message-widths: 20%, 25%, 30%, 35%;
+$channel-widths: 25%, 30%, 40%, 45%, 50%, 55%, 60%; 
 
 @function listRandom($list) {
   $number: random(length($list));
@@ -368,11 +369,16 @@ body {
     }
 
     &__list {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+
       &-item {
         color: var(--ui-text-color);
         cursor: pointer;
         padding: 0.4rem 0;
-        gap: 4px;
+        gap: 0.6rem;
         display: flex;
         align-items: center;
         border-radius: 4px;
@@ -395,7 +401,18 @@ body {
             color: var(--primary-text);
           }
         }
+
+        $parent: &;
+
+        @for $i from 1 through 25 {
+          &:nth-child(#{$i}) {
+            .channel-section__list-item__text {
+              @include placeholder(12px, listRandom($channel-widths), var(--ui-text-color));
+            }
+          }
+        }
       }
+
     }
   }
 }

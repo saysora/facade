@@ -1,5 +1,13 @@
 import { defineConfig } from 'vite'
 
-export default defineConfig({
-  base: '/facade/'
+export default defineConfig(({command}) => {
+  if (command === 'serve') {
+    return {
+
+    }
+  } else {
+    return {
+      base: '/facade/'
+    }
+  }
 });
