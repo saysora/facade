@@ -75,7 +75,7 @@ const colorEditor = (prop: string, label: string, element: string): HTMLElement 
     updateColorEv(e, prop);
   });
 
-  input.addEventListener('focusin', (e) => {
+  input.addEventListener('focusin', () => {
     const ui = document.querySelector('.ui');
     const bounds = relatedElement.getBoundingClientRect();
 
@@ -94,7 +94,7 @@ const colorEditor = (prop: string, label: string, element: string): HTMLElement 
     }
   });
 
-  input.addEventListener('focusout', (e) => {
+  input.addEventListener('focusout', () => {
     const focused = document.querySelector('.focused');
     focused?.remove();
     if(element === 'server-panel') {
