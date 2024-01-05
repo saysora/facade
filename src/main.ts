@@ -1,5 +1,5 @@
 import './facade.scss';
-const version = "0.0.2";
+const version = "0.0.3";
  
 
 const rootGet = getComputedStyle(document.body);
@@ -116,6 +116,8 @@ window.addEventListener('load', () => {
     debugBar.appendChild(colorEditor('--channel-bar-bg-color', 'Channel BG', 'server-inside'));
     debugBar.appendChild(colorEditor('--main-header-bg-color', 'Header BG', 'main-panel__header'));
     debugBar.appendChild(colorEditor('--main-content-bg-color', 'Main BG', 'main-panel__content-primary'));
+    debugBar.appendChild(colorEditor('--right-panel-bg-color', 'Panel BG', 'main-panel__content-panel'));
+    debugBar.appendChild(colorEditor('--right-panel-inner-bg-color', 'Panel Inner BG', 'main-panel__content-panel__lists-list'));
     // debugBar.appendChild(colorEditor('--main-panel-bg-color', 'Panel BG'));
   }
 });
