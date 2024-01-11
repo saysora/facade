@@ -570,7 +570,7 @@ body {
 
   transition: background 0.1s linear;
 
-  &__user {
+  &__icon {
     &-icon {
       @include icon(42px, 100%);
     }
@@ -605,7 +605,7 @@ body {
 
   @for $i from 1 through 100 {
     &:nth-child(#{$i}) {
-      #{$parent}__user-icon {
+      #{$parent}__icon-icon {
         background: listRandom($icon-colors);
       }
 
