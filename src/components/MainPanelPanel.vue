@@ -1,0 +1,3 @@
+<template>
+  Goodbye Moon?
+</template>

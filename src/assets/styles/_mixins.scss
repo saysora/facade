@@ -1,0 +1,20 @@
+
+@function listRandom($list) {
+  $number: random(length($list));
+  @return nth($list, $number);
+}
+
+@mixin icon($size: 12px, $radius: 4px, $background: listRandom($icon-colors)) {
+  width: $size;
+  height: $size;
+  border-radius: 100%;
+  background: $background;
+  border-radius: $radius;
+}
+
+@mixin placeholder($size: 12px, $width: 15%, $background: #fff) {
+  border-radius: 18px;
+  height: $size;
+  width: $width;
+  background: $background;
+}
